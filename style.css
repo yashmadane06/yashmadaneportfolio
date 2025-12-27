@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Landing Section */
+.land {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aurora-text {
+    font-size: clamp(5rem, 12vw, 12rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+    background: linear-gradient(120deg, #00c2ff, #33ff8c, #ffc640, #e54cff, #00c2ff);
+    background-size: 300% 300%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: aurora 6s ease-in-out infinite;
+}
+
+@keyframes aurora {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Hero Section */
+.hero {
+    min-height: 110vh;
+    background: linear-gradient(100deg, silver 0%, silver 55%, black 55%, black 100%);
+}
+
+main {
+    height: 100vh;
+    padding-top: 10vh;
+    display: flex;
+}
+
+main>div:first-child {
+    width: 40%;
+    padding-top: 200px;
+    padding-left: 80px;
+    color: black;
+}
+
+main h3 { font-size: 40px; }
+main h1 { font-size: 70px; }
+main dd { font-size: 25px; color: grey; }
+
+/* Typewriter animation */
+
+
+.cursor {
+  display: inline-block;
+  font-size: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black;
+  animation:
+    typing 3.5s steps(20, end),
+    blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 20ch; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+
+/* Social icons */
+#socials { display: flex; gap: 15px; margin-top: 20px; }
+#socials div { width: 40px; height: 40px; background: silver; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px black;}
+#socials div:hover { transform: scale(1.2); box-shadow: 5px 5px 5px solid black;}
+#socials img { height: 100%; width: 100%; }
+
+
+/* Right image */
+#selfimg {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Navbar */
+nav { height: 10vh; width: 100%; display: flex; font-size: small; position: fixed; top: 0; z-index: 10; background: transparent; }
+nav>section:first-child { width: 60%; }
+#nav-content { width: 40%; display: flex; justify-content: space-around; align-items: center; }
+nav a { color: white; text-decoration: none; text-shadow: 1px 1px 1px black;}
+#nav-content>div { background-color: white; padding: 6px 18px; border-radius: 20px; }
+#nav-content>div>a { color: black; text-shadow: 1px 1px 1px white;}
+#nav-content a:hover { color: yellow; text-decoration: underline; text-decoration-color: yellow; text-shadow: 2px 2px 2px orange; }
+
+/* About */
+#About { padding: 50px 15% 50px 15%; background: black; color: white; }
+#About:hover h2{ color : yellow ;text-decoration-color: yellow; text-shadow: 20% 20% 20% orange; }
+#About h2 { text-decoration: underline;  transition: 0.3s ease;}
+
+/* About Me */
+#aboutMe { padding: 100px; height: 100vh; width: 100vw; display:flex; flex-direction: column; gap: 30px; background-color:silver; justify-content: center; align-items: center; }
+#aboutMe div { display: flex; justify-content: center; align-items: center; flex-direction: column; }
+#aboutMe h1 { padding: 30px; border: 2px solid black; color: #111;  }
+#aboutMe:hover h1{ color: #000;        /* solid black */text-shadow: 1px 1px 0 #FF8C00,
+0 0 8px rgba(255,140,0,0.6);text-decoration: underline; text-decoration-color: yellow; text-shadow: 20% 20% 20% orange;}
+
+
+
+
+/* Skills */
+#skills { width: 100vw; background: silver; display: flex; justify-content: space-around; flex-direction: column; align-items: center; gap: 100px; }
+#skills h1 { border: 2px solid black; font-size: xx-large; padding: 30px; }
+#skillcards { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 50px; padding-left: 30%; padding-right: 30%; padding-bottom: 10%;}
+.card { width: 8rem; border: none; }
+.card:hover { transform: scale(0.8); transition-duration: 1.5s; box-shadow: 25px 0 25px rgba(0,0,0,0.15); }
+
+/* porfolio  */
+#portfolio{
+    padding: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-around;
+    background: rgb(156, 149, 149);
+}
+#portfolio img{
+    height: 50%;
+}
+#portfolio h1 { padding: 30px; border: 2px solid black; color: #111; background-color: rgba(255, 255, 255, 0.5); }
+#portfolio:hover h1{ color: #000;        /* solid black */text-shadow: 1px 1px 0 #FF8C00,
+0 0 8px rgba(255,140,0,0.6);text-decoration: underline; text-decoration-color: yellow; text-shadow: 20% 20% 20% orange;box-shadow: 5px 5px 5px black;}
+
+/* Contact */
+#contact { min-height: 100vh; background: #000; color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+#contact h2 { font-size: 3rem; margin-bottom: 30px; }
+#contact-form { width: 100%; max-width: 500px; display: flex; flex-direction: column; gap: 15px; }
+#contact-form input, #contact-form textarea { padding: 15px; border-radius: 8px; border: none; outline: none; font-size: 1rem; }
+#contact-form textarea { min-height: 120px; resize: none; }
+#contact-form button { padding: 15px; background: linear-gradient(120deg, #00c2ff, #33ff8c); border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; }
+#status { margin-top: 15px; }
+
+/* Portfolio Footer */
+.portfolio-banner { min-height: 60vh; padding: 200px ; overflow: hidden; }
+.big-bg-text { font-size: 13vw; letter-spacing: 10px; white-space: nowrap; }
+.portfolio-text { font-family: 'Playfair Display', serif; font-size: 4rem; font-style: italic; }
+.bg-silver { background-color: silver; }
